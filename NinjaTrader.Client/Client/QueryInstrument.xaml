@@ -1,0 +1,30 @@
+<Window
+	x:Class="NinjaTrader.Client.QueryInstrument" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Instrument Name"
+	SizeToContent="Height"
+	Width="300"
+	Icon="NinjaTrader.ico"
+	WindowStartupLocation="CenterScreen"
+	ResizeMode="NoResize" xmlns:client="clr-namespace:NinjaTrader.Client">
+	<StackPanel>
+		<TextBlock
+			TextAlignment="Center"
+			Margin="10"
+			TextWrapping="Wrap"
+			Text="eSignal does not provide an instrument name on an active $PLAYBACK file. Please enter the NinjaTrader instrument name." />
+		<UniformGrid
+			Columns="2">
+			<TextBlock
+				Text="Instrument:"
+				HorizontalAlignment="Right"
+				Margin="0,0,10,0" />
+			<TextBox
+				Name="instrument" />
+		</UniformGrid>
+		<Button
+			Content="OK"
+			Margin="90,20"
+			IsDefault="True"
+			Click="OnOk" />
+	</StackPanel>
+</Window>
